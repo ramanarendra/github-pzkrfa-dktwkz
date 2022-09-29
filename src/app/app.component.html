@@ -1,0 +1,38 @@
+<h3>
+  NOTE: If project not working here please take clone in your system then run
+  this project
+</h3>
+
+<b>clone link</b> -> https://github.com/Hspharwinder/Angular11_CK-editor.github
+<br /><br />
+1. Click on link on ckeditor. <br />
+2. Add link. <br />
+3. Enable 'open new tab' in link option. <br />
+4. Click on submit you will see your video link would be open in new tab. <br />
+
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="submit()"
+  class="form-horizontal"
+  role="form"
+>
+  <ckeditor
+    [editor]="Editor"
+    [config]="editorConfig"
+    formControlName="sport_description" (ready)="onReady($event)"
+  ></ckeditor>
+  <br /><br />
+  <button type="submit">Submit</button>
+</form>
+<br /><br /><br />
+View<br />
+========================================================<br />
+<div [innerHTML]="htmlValue"></div>
+
+<br /><br />Step To integrate ck-editor <br />
+==============================================
+<br />
+1. npm i @ckeditor/ckeditor5-angular<br />
+2. npm i @ckeditor/ckeditor5-build-classic<br />
+3. import in app.module.ts<br />
+4. import and use ckeditor in app.component.ts<br />
